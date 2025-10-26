@@ -370,14 +370,14 @@ void Setup(AlxWindow* w){
     vertexShaderSource = Files_Read("./src/vertexShader.glsl");
     if(!vertexShaderSource){
         printf("[vertexShader]: Error\n");
-        window.Running = 0;
+        window.w.Running = 0;
         return;
     }
 
     fragmentShaderSource = Files_Read("./src/fragmentShader.glsl");
     if(!fragmentShaderSource){
         printf("[fragmentShader]: Error\n");
-        window.Running = 0;
+        window.w.Running = 0;
         return;
     }
 

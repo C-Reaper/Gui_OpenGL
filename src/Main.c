@@ -366,7 +366,7 @@ void checkCompileErrors(GLuint shader, const char* type) {
     }
 }
 
-void Setup(AlxWindow* w){
+void Setup(AglWindow* w){
     vertexShaderSource = Files_Read("./src/vertexShader.glsl");
     if(!vertexShaderSource){
         printf("[vertexShader]: Error\n");
@@ -434,7 +434,7 @@ void Setup(AlxWindow* w){
         Sprite_Free(&sp);
     }
 }
-void Update(AlxWindow* w){
+void Update(AglWindow* w){
     glClearColor(0.5f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -443,7 +443,7 @@ void Update(AlxWindow* w){
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
-void Delete(AlxWindow* w){
+void Delete(AglWindow* w){
     if(vertexShaderSource)      free(vertexShaderSource);
     if(fragmentShaderSource)    free(fragmentShaderSource);
 
